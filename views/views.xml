@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <record id="pos_payment_method_view_form_inherit" model="ir.ui.view">
+      <field name="name">payment.method.form.inherit</field>
+      <field name="model">pos.payment.method</field>
+      <field name="priority">25</field>
+      <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='split_transactions']" position="after">
+          <field name="es_pago_tarjeta"/>
+          <field name="test_text"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

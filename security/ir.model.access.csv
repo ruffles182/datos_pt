@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_datos_pt_datos_pt,datos_pt.datos_pt,model_datos_pt_datos_pt,base.group_user,1,1,1,1

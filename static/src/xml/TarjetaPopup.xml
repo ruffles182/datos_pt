@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <t owl="1" t-name="TarjetaPopup">
+        <div class="modal-dialog" role="dialog">
+            <div class="popup popup-tarjeta">
+                <style>
+                    .close-alert {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 0.75rem 1.25rem;
+                        background-color: #bc3315;
+                        border: 0;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 1;
+                    }
+                    .text-pop {
+                        margin: 0;
+                        text-align: left;
+                        font-size: smaller;
+                    }
+                    .contenedor-inputs {
+                        padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+                    }
+                    .popup-tarjeta {
+                        padding-bottom: 1.5em;
+                    }
+                </style>
+                <header class="title">
+                    Favor de agregar los datos siguientes.
+                </header>
+                <div class="container">
+                    <div class="alert alert-danger" t.if="state.error">
+                        <!-- <p t-esc="state.error"/> -->
+                        <button type="button" class="close-alert" t-on-click="removeAlert()">
+                            <span aria-hidden="true">x</span>
+                        </button>
+                    </div>
+                    <div class="row-flex">
+                        <div class="contenedor-inputs">
+                            <div class="col-flex">
+                                <label class="text-pop">Terminación</label>
+                            </div>
+                            <div class="col-flex">
+                                <input t-model="state.terminacion" type="number" min="0" />
+                            </div>
+                        </div>
+                        <div class="contenedor-inputs">
+                            <div class="col-flex">
+                                <label class="text-pop">Número de autorización</label>
+                            </div>
+                            <div class="col-flex">
+                                <input t-model="state.noAutorizacion" type="number" min="0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="botones">
+                        <button style="background-color: #72b352; color: #ffffff;" class="button confirm" t-on-click="agregarDatos()">
+                            Aceptar
+                        </button>
+                        <button style="background-color: #bc3315; color: #ffffff;" class="button cancel" t-on-click="cancel()">
+                            Cancelar
+                        </button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</odoo>

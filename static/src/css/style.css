@@ -1,0 +1,33 @@
+/* .popup-tarjeta .container.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.popup-tarjeta .alert_danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.popup-tarjeta .alert_danger.p {
+    margin: 0;
+    text-align: left;
+    font-size: smaller;
+}
+.popup-tarjeta .alert_danger.button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.5);
+}
+.datos_tarjeta {
+    font-size: 10px;
+} */

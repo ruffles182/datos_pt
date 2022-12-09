@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+  <t t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+    <xpath expr="//div[contains(@class, 'orderlines')]" position="replace">
+        <div class="orderlines">
+            <t t-if="receipt.no_auto != ''">
+              <p style="font-size: 10px;">Terminación de tarjeta [<t t-esc="receipt.termi_targ" />]</p>
+            </t>
+            <t t-if="receipt.no_auto != ''">
+              <p style="font-size: 10px;">Número de autorización [<t t-esc="receipt.no_auto" />] </p>
+            </t>
+
+            <t t-call="OrderLinesReceipt"/>
+        </div>
+    </xpath>
+  </t>
+</templates>

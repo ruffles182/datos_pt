@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+  <t t-inherit="point_of_sale.PaymentMethodButton" t-inherit-mode="extension">
+    <xpath expr="//div[contains(@class, 'paymentmethod')]" position="replace">
+      <div class="button paymentmethod"
+            t-on-click="trigger('new-payment-line-pagos', props.paymentMethod)">
+          <div class="payment-name">
+              <t t-esc="props.paymentMethod.name" />
+          </div>
+      </div>
+    </xpath>
+  </t>
+</templates>
